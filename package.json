@@ -1,0 +1,23 @@
+{
+  "name": "@aidenpwnz/workspace",
+  "version": "1.0.0",
+  "description": "aidenpwnz portfolio workspace",
+  "author": "Luca Pellegrino",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "cd apps/web && yarn dev"
+  },
+  "devDependencies": {
+    "typescript": "5.0.4"
+  },
+  "workspaces": [
+    "apps/*",
+    "ui/*",
+    "store"
+  ],
+  "engines": {
+    "node": ">=17"
+  },
+  "packageManager": "yarn@3.5.0"
+}

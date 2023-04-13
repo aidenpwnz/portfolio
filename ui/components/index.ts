@@ -1,1 +1,1 @@
-export * as Components from "./home";
+export * as Typography from "./typography";

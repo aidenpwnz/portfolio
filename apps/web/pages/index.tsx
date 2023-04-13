@@ -1,9 +1,10 @@
 import { NextPage } from "next";
+import { Typography } from "@aidenpwnz/components";
 
 const Home: NextPage = () => {
   return (
     <div>
-      <h1 className="text-red-500">TEST TAILWINDcss</h1>
+      <Typography.Heading>Test monorepo components</Typography.Heading>
     </div>
   );
 };

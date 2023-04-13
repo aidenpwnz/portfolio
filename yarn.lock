@@ -5,33 +5,18 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@aidenpwnz/components@workspace:ui/components":
+"@aidenpwnz/components@workspace:*, @aidenpwnz/components@workspace:ui/components":
   version: 0.0.0-use.local
   resolution: "@aidenpwnz/components@workspace:ui/components"
   dependencies:
-    "@types/react": ^18.0.28
-    "@types/react-dom": ^18.0.11
-    autoprefixer: ^10.4.14
-    postcss: ^8.4.21
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    tailwindcss: ^3.3.1
-    typescript: 5.0.4
-  languageName: unknown
-  linkType: soft
-
-"@aidenpwnz/presenters@workspace:ui/presenters":
-  version: 0.0.0-use.local
-  resolution: "@aidenpwnz/presenters@workspace:ui/presenters"
-  dependencies:
     "@aidenpwnz/types": "workspace:*"
-    "@types/react": ^18.0.28
-    "@types/react-dom": ^18.0.11
-    autoprefixer: ^10.4.14
-    postcss: ^8.4.21
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    tailwindcss: ^3.3.1
+    "@types/react": 18.0.35
+    "@types/react-dom": 18.0.11
+    autoprefixer: 10.4.14
+    postcss: 8.4.21
+    react: 18.2.0
+    react-dom: 18.2.0
+    tailwindcss: 3.3.1
     typescript: 5.0.4
   languageName: unknown
   linkType: soft
@@ -55,9 +40,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@aidenpwnz/types@workspace:ui/types"
   dependencies:
-    "@types/react": ^18.0.28
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    "@types/react": 18.0.35
+    "@types/react-dom": 18.0.11
+    react: 18.2.0
+    react-dom: 18.2.0
     typescript: 5.0.4
   languageName: unknown
   linkType: soft
@@ -66,6 +52,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@aidenpwnz/web@workspace:apps/web"
   dependencies:
+    "@aidenpwnz/components": "workspace:*"
     "@types/eslint": ^8
     "@types/node": 18.15.11
     "@types/react": 18.0.35
@@ -74,6 +61,7 @@ __metadata:
     eslint: 8.38.0
     eslint-config-next: 13.3.0
     next: 13.3.0
+    next-transpile-modules: ^10.0.0
     postcss: 8.4.21
     react: 18.2.0
     react-dom: 18.2.0
@@ -740,7 +728,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:10.4.14, autoprefixer@npm:^10.4.14":
+"autoprefixer@npm:10.4.14":
   version: 10.4.14
   resolution: "autoprefixer@npm:10.4.14"
   dependencies:
@@ -1188,7 +1176,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"enhanced-resolve@npm:^5.12.0":
+"enhanced-resolve@npm:^5.10.0, enhanced-resolve@npm:^5.12.0":
   version: 5.12.0
   resolution: "enhanced-resolve@npm:5.12.0"
   dependencies:
@@ -2736,6 +2724,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"next-transpile-modules@npm:^10.0.0":
+  version: 10.0.0
+  resolution: "next-transpile-modules@npm:10.0.0"
+  dependencies:
+    enhanced-resolve: ^5.10.0
+  checksum: 3300fc7081f63b2c9487588db7cbe718f209dfd2111adec22d9c8af0e3c8ade2d95fd45f91e045546d78d98cafc78a49431de9a623360d33831b5e694bf007c9
+  languageName: node
+  linkType: hard
+
 "next@npm:13.3.0":
   version: 13.3.0
   resolution: "next@npm:13.3.0"
@@ -3167,7 +3164,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.4.21, postcss@npm:^8.0.9, postcss@npm:^8.4.21":
+"postcss@npm:8.4.21, postcss@npm:^8.0.9":
   version: 8.4.21
   resolution: "postcss@npm:8.4.21"
   dependencies:
@@ -3747,7 +3744,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:3.3.1, tailwindcss@npm:^3.3.1":
+"tailwindcss@npm:3.3.1":
   version: 3.3.1
   resolution: "tailwindcss@npm:3.3.1"
   dependencies:

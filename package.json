@@ -9,13 +9,18 @@
     "dev": "cd apps/web && yarn dev"
   },
   "devDependencies": {
+    "prettier": "^2.8.7",
+    "prettier-plugin-organize-imports": "3.2.2",
+    "prettier-plugin-tailwindcss": "0.2.7",
     "typescript": "5.0.4"
   },
   "workspaces": [
     "apps/*",
-    "ui/components",
-    "ui/types",
-    "store"
+    "libs/store",
+    "libs/ui/components",
+    "libs/ui/fragments",
+    "libs/ui/typography",
+    "libs/types"
   ],
   "engines": {
     "node": ">=18"

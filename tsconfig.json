@@ -1,19 +1,26 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
     "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "composite": true,
-    "esModuleInterop": true,
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "paths": {
+      "@aidenpwnz/store": ["./libs/store"],
+      "@aidenpwnz/types": ["./libs/types"],
+      "@aidenpwnz/components": ["./libs/ui/components"],
+      "@aidenpwnz/fragments": ["./libs/ui/fragments"],
+      "@aidenpwnz/typography": ["./libs/ui/typography"]
+    }
   }
 }

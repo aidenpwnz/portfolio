@@ -1,0 +1,11 @@
+{
+  "name": "@aidenpwnz/assets",
+  "version": "1.0.0",
+  "description": "Assets lib",
+  "author": "Luca Pellegrino",
+  "private": true,
+  "main": "index.ts",
+  "devDependencies": {
+    "typescript": "5.0.4"
+  }
+}

@@ -24,16 +24,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:libs/types"\
       },\
       {\
+        "name": "@aidenpwnz/assets",\
+        "reference": "workspace:libs/ui/assets"\
+      },\
+      {\
         "name": "@aidenpwnz/components",\
         "reference": "workspace:libs/ui/components"\
       },\
       {\
         "name": "@aidenpwnz/fragments",\
         "reference": "workspace:libs/ui/fragments"\
-      },\
-      {\
-        "name": "@aidenpwnz/typography",\
-        "reference": "workspace:libs/ui/typography"\
       },\
       {\
         "name": "@aidenpwnz/utils",\
@@ -43,10 +43,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "enableTopLevelFallback": true,\
     "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
     "fallbackExclusionList": [\
+      ["@aidenpwnz/assets", ["workspace:libs/ui/assets"]],\
       ["@aidenpwnz/components", ["workspace:libs/ui/components"]],\
       ["@aidenpwnz/fragments", ["workspace:libs/ui/fragments"]],\
       ["@aidenpwnz/types", ["workspace:libs/types"]],\
-      ["@aidenpwnz/typography", ["workspace:libs/ui/typography"]],\
       ["@aidenpwnz/utils", ["workspace:libs/utils"]],\
       ["@aidenpwnz/web", ["workspace:apps/web"]],\
       ["@aidenpwnz/workspace", ["workspace:."]]\
@@ -66,21 +66,34 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT"\
         }]\
       ]],\
+      ["@aidenpwnz/assets", [\
+        ["workspace:libs/ui/assets", {\
+          "packageLocation": "./libs/ui/assets/",\
+          "packageDependencies": [\
+            ["@aidenpwnz/assets", "workspace:libs/ui/assets"],\
+            ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=85af82"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
       ["@aidenpwnz/components", [\
         ["workspace:libs/ui/components", {\
           "packageLocation": "./libs/ui/components/",\
           "packageDependencies": [\
             ["@aidenpwnz/components", "workspace:libs/ui/components"],\
+            ["@aidenpwnz/assets", "workspace:libs/ui/assets"],\
             ["@aidenpwnz/fragments", "workspace:libs/ui/fragments"],\
             ["@aidenpwnz/types", "workspace:libs/types"],\
             ["@aidenpwnz/utils", "workspace:libs/utils"],\
-            ["@hookstate/core", "virtual:44bc0df5157f4e65716aeac28c6b5fcf7214a983c8f8393fd290126cad378d4871e59239039eb42e802413abb13bfb3ccb710d16f94ad18e79e4c0931875adb3#npm:4.0.1"],\
             ["@types/react", "npm:18.0.35"],\
             ["@types/react-dom", "npm:18.0.11"],\
             ["autoprefixer", "virtual:b7ca88b31dd6d3441067661abf012a97b1433ab2195eee333c7a89afb55c0a0e2ce4046d9ff6840040fc89e2b8033245ff1bc471684cd3e9c75d143484cd1d69#npm:10.4.14"],\
+            ["framer-motion", "virtual:3d50eae76ae0941328a10966d9f73cb6ca1c87c53ccfb52820a39f2f2c4fc3bc3acc4f72ae04bea45db51d7ac97b7c4ca4eee4d66572a3df6b0bef569c1cfd78#npm:10.12.2"],\
             ["postcss", "npm:8.4.21"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:b321321f8f6969f6659795b4e62cd5c0840cb916abaf0fe7d8ee92aaa34c054f48ae9a0a3a6d39759300f31cea44f86519ecc7925c2b78109122dec145e66ed9#npm:18.2.0"],\
+            ["react-simple-typewriter", "virtual:3d50eae76ae0941328a10966d9f73cb6ca1c87c53ccfb52820a39f2f2c4fc3bc3acc4f72ae04bea45db51d7ac97b7c4ca4eee4d66572a3df6b0bef569c1cfd78#npm:5.0.1"],\
+            ["react-social-icons", "virtual:3d50eae76ae0941328a10966d9f73cb6ca1c87c53ccfb52820a39f2f2c4fc3bc3acc4f72ae04bea45db51d7ac97b7c4ca4eee4d66572a3df6b0bef569c1cfd78#npm:5.15.0"],\
             ["tailwindcss", "virtual:b7ca88b31dd6d3441067661abf012a97b1433ab2195eee333c7a89afb55c0a0e2ce4046d9ff6840040fc89e2b8033245ff1bc471684cd3e9c75d143484cd1d69#npm:3.3.1"],\
             ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=85af82"]\
           ],\
@@ -119,24 +132,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT"\
         }]\
       ]],\
-      ["@aidenpwnz/typography", [\
-        ["workspace:libs/ui/typography", {\
-          "packageLocation": "./libs/ui/typography/",\
-          "packageDependencies": [\
-            ["@aidenpwnz/typography", "workspace:libs/ui/typography"],\
-            ["@aidenpwnz/types", "workspace:libs/types"],\
-            ["@types/react", "npm:18.0.35"],\
-            ["@types/react-dom", "npm:18.0.11"],\
-            ["autoprefixer", "virtual:b7ca88b31dd6d3441067661abf012a97b1433ab2195eee333c7a89afb55c0a0e2ce4046d9ff6840040fc89e2b8033245ff1bc471684cd3e9c75d143484cd1d69#npm:10.4.14"],\
-            ["postcss", "npm:8.4.21"],\
-            ["react", "npm:18.2.0"],\
-            ["react-dom", "virtual:b321321f8f6969f6659795b4e62cd5c0840cb916abaf0fe7d8ee92aaa34c054f48ae9a0a3a6d39759300f31cea44f86519ecc7925c2b78109122dec145e66ed9#npm:18.2.0"],\
-            ["tailwindcss", "virtual:b7ca88b31dd6d3441067661abf012a97b1433ab2195eee333c7a89afb55c0a0e2ce4046d9ff6840040fc89e2b8033245ff1bc471684cd3e9c75d143484cd1d69#npm:3.3.1"],\
-            ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=85af82"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
       ["@aidenpwnz/utils", [\
         ["workspace:libs/utils", {\
           "packageLocation": "./libs/utils/",\
@@ -159,7 +154,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@aidenpwnz/web", "workspace:apps/web"],\
             ["@aidenpwnz/components", "workspace:libs/ui/components"],\
             ["@aidenpwnz/fragments", "workspace:libs/ui/fragments"],\
-            ["@aidenpwnz/typography", "workspace:libs/ui/typography"],\
             ["@aidenpwnz/utils", "workspace:libs/utils"],\
             ["@types/node", "npm:18.15.11"],\
             ["@types/react", "npm:18.0.35"],\
@@ -515,6 +509,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/helper-string-parser", "npm:7.19.4"],\
             ["@babel/helper-validator-identifier", "npm:7.19.1"],\
             ["to-fast-properties", "npm:2.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@emotion/is-prop-valid", [\
+        ["npm:0.8.8", {\
+          "packageLocation": "./.yarn/cache/@emotion-is-prop-valid-npm-0.8.8-261a0f2426-bb7ec6d48c.zip/node_modules/@emotion/is-prop-valid/",\
+          "packageDependencies": [\
+            ["@emotion/is-prop-valid", "npm:0.8.8"],\
+            ["@emotion/memoize", "npm:0.7.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@emotion/memoize", [\
+        ["npm:0.7.4", {\
+          "packageLocation": "./.yarn/cache/@emotion-memoize-npm-0.7.4-5648cf11b8-4e3920d4ec.zip/node_modules/@emotion/memoize/",\
+          "packageDependencies": [\
+            ["@emotion/memoize", "npm:0.7.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1515,6 +1528,34 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/fraction.js-npm-4.2.0-28efe4afc7-8c76a6e21d.zip/node_modules/fraction.js/",\
           "packageDependencies": [\
             ["fraction.js", "npm:4.2.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["framer-motion", [\
+        ["npm:10.12.2", {\
+          "packageLocation": "./.yarn/cache/framer-motion-npm-10.12.2-9cef6d8e3b-772fdbcd29.zip/node_modules/framer-motion/",\
+          "packageDependencies": [\
+            ["framer-motion", "npm:10.12.2"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:3d50eae76ae0941328a10966d9f73cb6ca1c87c53ccfb52820a39f2f2c4fc3bc3acc4f72ae04bea45db51d7ac97b7c4ca4eee4d66572a3df6b0bef569c1cfd78#npm:10.12.2", {\
+          "packageLocation": "./.yarn/__virtual__/framer-motion-virtual-f61507f4aa/0/cache/framer-motion-npm-10.12.2-9cef6d8e3b-772fdbcd29.zip/node_modules/framer-motion/",\
+          "packageDependencies": [\
+            ["framer-motion", "virtual:3d50eae76ae0941328a10966d9f73cb6ca1c87c53ccfb52820a39f2f2c4fc3bc3acc4f72ae04bea45db51d7ac97b7c4ca4eee4d66572a3df6b0bef569c1cfd78#npm:10.12.2"],\
+            ["@emotion/is-prop-valid", "npm:0.8.8"],\
+            ["@types/react", "npm:18.0.35"],\
+            ["@types/react-dom", "npm:18.0.11"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:b321321f8f6969f6659795b4e62cd5c0840cb916abaf0fe7d8ee92aaa34c054f48ae9a0a3a6d39759300f31cea44f86519ecc7925c2b78109122dec145e66ed9#npm:18.2.0"],\
+            ["tslib", "npm:2.5.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react-dom",\
+            "@types/react",\
+            "react-dom",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2618,6 +2659,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["prop-types", [\
+        ["npm:15.8.1", {\
+          "packageLocation": "./.yarn/cache/prop-types-npm-15.8.1-17c71ee7ee-c056d3f1c0.zip/node_modules/prop-types/",\
+          "packageDependencies": [\
+            ["prop-types", "npm:15.8.1"],\
+            ["loose-envify", "npm:1.4.0"],\
+            ["object-assign", "npm:4.1.1"],\
+            ["react-is", "npm:16.13.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["queue-microtask", [\
         ["npm:1.2.3", {\
           "packageLocation": "./.yarn/cache/queue-microtask-npm-1.2.3-fcc98e4e2d-b676f8c040.zip/node_modules/queue-microtask/",\
@@ -2670,11 +2723,69 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["react-is", [\
+        ["npm:16.13.1", {\
+          "packageLocation": "./.yarn/cache/react-is-npm-16.13.1-a9b9382b4f-f7a19ac349.zip/node_modules/react-is/",\
+          "packageDependencies": [\
+            ["react-is", "npm:16.13.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["react-refresh", [\
         ["npm:0.14.0", {\
           "packageLocation": "./.yarn/cache/react-refresh-npm-0.14.0-78ef5eeb73-dc69fa8c99.zip/node_modules/react-refresh/",\
           "packageDependencies": [\
             ["react-refresh", "npm:0.14.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["react-simple-typewriter", [\
+        ["npm:5.0.1", {\
+          "packageLocation": "./.yarn/cache/react-simple-typewriter-npm-5.0.1-fe9c2de053-43c7eb696a.zip/node_modules/react-simple-typewriter/",\
+          "packageDependencies": [\
+            ["react-simple-typewriter", "npm:5.0.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:3d50eae76ae0941328a10966d9f73cb6ca1c87c53ccfb52820a39f2f2c4fc3bc3acc4f72ae04bea45db51d7ac97b7c4ca4eee4d66572a3df6b0bef569c1cfd78#npm:5.0.1", {\
+          "packageLocation": "./.yarn/__virtual__/react-simple-typewriter-virtual-18ecfb2449/0/cache/react-simple-typewriter-npm-5.0.1-fe9c2de053-43c7eb696a.zip/node_modules/react-simple-typewriter/",\
+          "packageDependencies": [\
+            ["react-simple-typewriter", "virtual:3d50eae76ae0941328a10966d9f73cb6ca1c87c53ccfb52820a39f2f2c4fc3bc3acc4f72ae04bea45db51d7ac97b7c4ca4eee4d66572a3df6b0bef569c1cfd78#npm:5.0.1"],\
+            ["@types/react", "npm:18.0.35"],\
+            ["@types/react-dom", "npm:18.0.11"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:b321321f8f6969f6659795b4e62cd5c0840cb916abaf0fe7d8ee92aaa34c054f48ae9a0a3a6d39759300f31cea44f86519ecc7925c2b78109122dec145e66ed9#npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react-dom",\
+            "@types/react",\
+            "react-dom",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["react-social-icons", [\
+        ["npm:5.15.0", {\
+          "packageLocation": "./.yarn/cache/react-social-icons-npm-5.15.0-17aa291c0e-b93d2ca603.zip/node_modules/react-social-icons/",\
+          "packageDependencies": [\
+            ["react-social-icons", "npm:5.15.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:3d50eae76ae0941328a10966d9f73cb6ca1c87c53ccfb52820a39f2f2c4fc3bc3acc4f72ae04bea45db51d7ac97b7c4ca4eee4d66572a3df6b0bef569c1cfd78#npm:5.15.0", {\
+          "packageLocation": "./.yarn/__virtual__/react-social-icons-virtual-eb426cfe7c/0/cache/react-social-icons-npm-5.15.0-17aa291c0e-b93d2ca603.zip/node_modules/react-social-icons/",\
+          "packageDependencies": [\
+            ["react-social-icons", "virtual:3d50eae76ae0941328a10966d9f73cb6ca1c87c53ccfb52820a39f2f2c4fc3bc3acc4f72ae04bea45db51d7ac97b7c4ca4eee4d66572a3df6b0bef569c1cfd78#npm:5.15.0"],\
+            ["@types/react", "npm:18.0.35"],\
+            ["prop-types", "npm:15.8.1"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3056,6 +3167,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/ts-interface-checker-npm-0.1.13-0c7b064494-20c29189c2.zip/node_modules/ts-interface-checker/",\
           "packageDependencies": [\
             ["ts-interface-checker", "npm:0.1.13"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["tslib", [\
+        ["npm:2.5.0", {\
+          "packageLocation": "./.yarn/cache/tslib-npm-2.5.0-bb364efebd-ae3ed5f9ce.zip/node_modules/tslib/",\
+          "packageDependencies": [\
+            ["tslib", "npm:2.5.0"]\
           ],\
           "linkType": "HARD"\
         }]\

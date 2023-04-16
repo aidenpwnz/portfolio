@@ -4,7 +4,31 @@ module.exports = {
       fontFamily: {
         default: "Inter",
       },
-      colors: {},
+      screens: {
+        md: "830px",
+      },
+      keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" },
+        },
+        breathing: {
+          "0%, 50%, 100%": { transform: "scale(1.8)", opacity: 0 },
+          "25%, 75%": { transform: "scale(2)", opacity: 0.6 },
+        },
+      },
+      animation: {
+        wiggle: "wiggle 200ms ease-in-out",
+        breathing: "breathing 10s ease-out infinite normal",
+        "ping-slow": "ping 3s cubic-bezier(0, 0, 0.2, 1) infinite",
+      },
+      colors: {
+        "ebony-clay": "#232934",
+        comet: "#C0CADD",
+      },
+      backgroundImage: {
+        grad: "linear-gradient(to right, red, purple)",
+      },
       fontWeight: {
         important: "bold",
         h1: "bold",

@@ -5,20 +5,31 @@ __metadata:
   version: 6
   cacheKey: 8
 
+"@aidenpwnz/assets@workspace:*, @aidenpwnz/assets@workspace:libs/ui/assets":
+  version: 0.0.0-use.local
+  resolution: "@aidenpwnz/assets@workspace:libs/ui/assets"
+  dependencies:
+    typescript: 5.0.4
+  languageName: unknown
+  linkType: soft
+
 "@aidenpwnz/components@workspace:*, @aidenpwnz/components@workspace:libs/ui/components":
   version: 0.0.0-use.local
   resolution: "@aidenpwnz/components@workspace:libs/ui/components"
   dependencies:
+    "@aidenpwnz/assets": "workspace:*"
     "@aidenpwnz/fragments": "workspace:*"
     "@aidenpwnz/types": "workspace:*"
     "@aidenpwnz/utils": "workspace:*"
-    "@hookstate/core": 4.0.1
     "@types/react": 18.0.35
     "@types/react-dom": 18.0.11
     autoprefixer: 10.4.14
+    framer-motion: 10.12.2
     postcss: 8.4.21
     react: 18.2.0
     react-dom: 18.2.0
+    react-simple-typewriter: 5.0.1
+    react-social-icons: 5.15.0
     tailwindcss: 3.3.1
     typescript: 5.0.4
   languageName: unknown
@@ -52,22 +63,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@aidenpwnz/typography@workspace:*, @aidenpwnz/typography@workspace:libs/ui/typography":
-  version: 0.0.0-use.local
-  resolution: "@aidenpwnz/typography@workspace:libs/ui/typography"
-  dependencies:
-    "@aidenpwnz/types": "workspace:*"
-    "@types/react": 18.0.35
-    "@types/react-dom": 18.0.11
-    autoprefixer: 10.4.14
-    postcss: 8.4.21
-    react: 18.2.0
-    react-dom: 18.2.0
-    tailwindcss: 3.3.1
-    typescript: 5.0.4
-  languageName: unknown
-  linkType: soft
-
 "@aidenpwnz/utils@workspace:*, @aidenpwnz/utils@workspace:libs/utils":
   version: 0.0.0-use.local
   resolution: "@aidenpwnz/utils@workspace:libs/utils"
@@ -87,7 +82,6 @@ __metadata:
   dependencies:
     "@aidenpwnz/components": "workspace:*"
     "@aidenpwnz/fragments": "workspace:*"
-    "@aidenpwnz/typography": "workspace:*"
     "@aidenpwnz/utils": "workspace:*"
     "@types/node": 18.15.11
     "@types/react": 18.0.35
@@ -377,6 +371,22 @@ __metadata:
     "@babel/helper-validator-identifier": ^7.19.1
     to-fast-properties: ^2.0.0
   checksum: 587bc55a91ce003b0f8aa10d70070f8006560d7dc0360dc0406d306a2cb2a10154e2f9080b9c37abec76907a90b330a536406cb75e6bdc905484f37b75c73219
+  languageName: node
+  linkType: hard
+
+"@emotion/is-prop-valid@npm:^0.8.2":
+  version: 0.8.8
+  resolution: "@emotion/is-prop-valid@npm:0.8.8"
+  dependencies:
+    "@emotion/memoize": 0.7.4
+  checksum: bb7ec6d48c572c540e24e47cc94fc2f8dec2d6a342ae97bc9c8b6388d9b8d283862672172a1bb62d335c02662afe6291e10c71e9b8642664a8b43416cdceffac
+  languageName: node
+  linkType: hard
+
+"@emotion/memoize@npm:0.7.4":
+  version: 0.7.4
+  resolution: "@emotion/memoize@npm:0.7.4"
+  checksum: 4e3920d4ec95995657a37beb43d3f4b7d89fed6caa2b173a4c04d10482d089d5c3ea50bbc96618d918b020f26ed6e9c4026bbd45433566576c1f7b056c3271dc
   languageName: node
   linkType: hard
 
@@ -1243,6 +1253,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"framer-motion@npm:10.12.2":
+  version: 10.12.2
+  resolution: "framer-motion@npm:10.12.2"
+  dependencies:
+    "@emotion/is-prop-valid": ^0.8.2
+    tslib: ^2.4.0
+  peerDependencies:
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  dependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 772fdbcd2962061a29d28fb0ee3aa5099342f812ae107b8d0860b955a98cdd2ab18e2a838d34a1810126366779cd5c1e349705cb12561828403763a73d69ebfd
+  languageName: node
+  linkType: hard
+
 "fs-minipass@npm:^2.0.0, fs-minipass@npm:^2.1.0":
   version: 2.1.0
   resolution: "fs-minipass@npm:2.1.0"
@@ -1605,7 +1636,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"loose-envify@npm:^1.1.0":
+"loose-envify@npm:^1.1.0, loose-envify@npm:^1.4.0":
   version: 1.4.0
   resolution: "loose-envify@npm:1.4.0"
   dependencies:
@@ -1900,7 +1931,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"object-assign@npm:^4.0.1":
+"object-assign@npm:^4.0.1, object-assign@npm:^4.1.1":
   version: 4.1.1
   resolution: "object-assign@npm:4.1.1"
   checksum: fcc6e4ea8c7fe48abfbb552578b1c53e0d194086e2e6bbbf59e0a536381a292f39943c6e9628af05b5528aa5e3318bb30d6b2e53cadaf5b8fe9e12c4b69af23f
@@ -2153,6 +2184,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prop-types@npm:^15.7.2":
+  version: 15.8.1
+  resolution: "prop-types@npm:15.8.1"
+  dependencies:
+    loose-envify: ^1.4.0
+    object-assign: ^4.1.1
+    react-is: ^16.13.1
+  checksum: c056d3f1c057cb7ff8344c645450e14f088a915d078dcda795041765047fa080d38e5d626560ccaac94a4e16e3aa15f3557c1a9a8d1174530955e992c675e459
+  languageName: node
+  linkType: hard
+
 "queue-microtask@npm:^1.2.2":
   version: 1.2.3
   resolution: "queue-microtask@npm:1.2.3"
@@ -2179,10 +2221,38 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-is@npm:^16.13.1":
+  version: 16.13.1
+  resolution: "react-is@npm:16.13.1"
+  checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
+  languageName: node
+  linkType: hard
+
 "react-refresh@npm:^0.14.0":
   version: 0.14.0
   resolution: "react-refresh@npm:0.14.0"
   checksum: dc69fa8c993df512f42dd0f1b604978ae89bd747c0ed5ec595c0cc50d535fb2696619ccd98ae28775cc01d0a7c146a532f0f7fb81dc22e1977c242a4912312f4
+  languageName: node
+  linkType: hard
+
+"react-simple-typewriter@npm:5.0.1":
+  version: 5.0.1
+  resolution: "react-simple-typewriter@npm:5.0.1"
+  peerDependencies:
+    react: ">=18.0.0"
+    react-dom: ">=18.0.0"
+  checksum: 43c7eb696a7293ceec54b3f31fa6db5e7ce1b312b55e357ecbf705eae522fbc661dd3000c57364f04e7afec327655b21b3cfc97c9e32193771892ad36e6a4426
+  languageName: node
+  linkType: hard
+
+"react-social-icons@npm:5.15.0":
+  version: 5.15.0
+  resolution: "react-social-icons@npm:5.15.0"
+  dependencies:
+    prop-types: ^15.7.2
+  peerDependencies:
+    react: 15.x.x || 16.x.x || 17.x.x || 18.x.x
+  checksum: b93d2ca603f24825424a44a996215af261868247897bfced1ca37f8ab9dbceb14f73ed399e49b18c9f3d77faf7aad6b5f577553dc13e435d4c3bbb21bc08c278
   languageName: node
   linkType: hard
 
@@ -2551,6 +2621,13 @@ __metadata:
   version: 0.1.13
   resolution: "ts-interface-checker@npm:0.1.13"
   checksum: 20c29189c2dd6067a8775e07823ddf8d59a33e2ffc47a1bd59a5cb28bb0121a2969a816d5e77eda2ed85b18171aa5d1c4005a6b88ae8499ec7cc49f78571cb5e
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.4.0":
+  version: 2.5.0
+  resolution: "tslib@npm:2.5.0"
+  checksum: ae3ed5f9ce29932d049908ebfdf21b3a003a85653a9a140d614da6b767a93ef94f460e52c3d787f0e4f383546981713f165037dc2274df212ea9f8a4541004e1
   languageName: node
   linkType: hard
 

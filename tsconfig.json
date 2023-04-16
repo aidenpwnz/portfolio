@@ -17,11 +17,12 @@
     "jsx": "react-jsx",
     "paths": {
       "@aidenpwnz/store": ["./libs/store"],
+      "@aidenpwnz/web/*": ["./apps/web/*"],
       "@aidenpwnz/types": ["./libs/types"],
       "@aidenpwnz/utils": ["./libs/utils"],
       "@aidenpwnz/components": ["./libs/ui/components"],
       "@aidenpwnz/fragments": ["./libs/ui/fragments"],
-      "@aidenpwnz/typography": ["./libs/ui/typography"]
+      "@aidenpwnz/assets": ["./libs/ui/assets"]
     }
   }
 }

@@ -20,7 +20,7 @@
     "libs/utils",
     "libs/ui/components",
     "libs/ui/fragments",
-    "libs/ui/typography"
+    "libs/ui/assets"
   ],
   "engines": {
     "node": ">=18"

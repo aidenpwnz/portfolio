@@ -1,1 +1,3 @@
-export * from "./counter-button";
+export * from "./social-icons";
+export * from "./header";
+export * from "./hero";

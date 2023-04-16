@@ -6,12 +6,15 @@
   "private": true,
   "main": "index.ts",
   "dependencies": {
+    "@aidenpwnz/assets": "workspace:*",
     "@aidenpwnz/fragments": "workspace:*",
     "@aidenpwnz/types": "workspace:*",
     "@aidenpwnz/utils": "workspace:*",
-    "@hookstate/core": "4.0.1",
+    "framer-motion": "10.12.2",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-simple-typewriter": "5.0.1",
+    "react-social-icons": "5.15.0"
   },
   "devDependencies": {
     "@types/react": "18.0.35",

@@ -1,50 +1,7 @@
-const Header = (props: {
-  children: React.ReactElement | React.ReactElement[];
-}) => {
-  return <>{props.children}</>;
-};
+import { type } from "@aidenpwnz/types";
 
-const Content = (props: {
-  children: React.ReactElement | React.ReactElement[];
-}) => {
-  return <>{props.children}</>;
-};
-
-const Footer = (props: {
-  children: React.ReactElement | React.ReactElement[];
-}) => {
-  return <>{props.children}</>;
-};
-
-export const PageLayout = ({
-  children,
-}: {
-  children: Array<React.ReactElement>;
-}) => {
-  const header = children.find((el) => el.type === Header);
-  const content = children.find((el) => el.type === Content);
-  const footer = children.find((el) => el.type === Footer);
-
-  return (
-    <div className="h-fit w-screen min-h-screen">
-      <head>
-        <title>Luca's Portfolio</title>
-      </head>
-      <header className="w-screen">
-        {header ? header.props.children : null}
-      </header>
-      <main className="w-screen">
-        {content ? content.props.children : null}
-      </main>
-      <footer className="w-screen">
-        {footer ? footer.props.children : null}
-      </footer>
-    </div>
-  );
-};
-
-PageLayout.Header = Header;
-PageLayout.Content = Content;
-PageLayout.Footer = Footer;
-
-// export default Layout;
+export const PageLayout: React.FC<type.LayoutProps> = (props) => (
+  <div className="w-screen h-screen bg-ebony-clay text-white snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0">
+    {props.children}
+  </div>
+);

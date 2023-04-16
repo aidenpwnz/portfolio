@@ -1,1 +1,2 @@
-export * as comps from "./bundler";
+export * as c from "./bundler";
+export * from "./layout";

@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-
 export interface h1 {
-  children: ReactNode;
+  children: React.ReactNode;
 }

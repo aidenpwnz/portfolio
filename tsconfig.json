@@ -18,6 +18,7 @@
     "paths": {
       "@aidenpwnz/store": ["./libs/store"],
       "@aidenpwnz/types": ["./libs/types"],
+      "@aidenpwnz/utils": ["./libs/utils"],
       "@aidenpwnz/components": ["./libs/ui/components"],
       "@aidenpwnz/fragments": ["./libs/ui/fragments"],
       "@aidenpwnz/typography": ["./libs/ui/typography"]

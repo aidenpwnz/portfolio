@@ -16,11 +16,11 @@
   },
   "workspaces": [
     "apps/*",
-    "libs/store",
+    "libs/types",
+    "libs/utils",
     "libs/ui/components",
     "libs/ui/fragments",
-    "libs/ui/typography",
-    "libs/types"
+    "libs/ui/typography"
   ],
   "engines": {
     "node": ">=18"

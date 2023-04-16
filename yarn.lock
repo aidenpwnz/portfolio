@@ -9,7 +9,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@aidenpwnz/components@workspace:libs/ui/components"
   dependencies:
+    "@aidenpwnz/fragments": "workspace:*"
     "@aidenpwnz/types": "workspace:*"
+    "@aidenpwnz/utils": "workspace:*"
+    "@hookstate/core": 4.0.1
     "@types/react": 18.0.35
     "@types/react-dom": 18.0.11
     autoprefixer: 10.4.14
@@ -34,20 +37,6 @@ __metadata:
     react-dom: 18.2.0
     tailwindcss: 3.3.1
     typescript: 5.0.4
-  languageName: unknown
-  linkType: soft
-
-"@aidenpwnz/store@workspace:*, @aidenpwnz/store@workspace:libs/store":
-  version: 0.0.0-use.local
-  resolution: "@aidenpwnz/store@workspace:libs/store"
-  dependencies:
-    "@types/react": 18.0.35
-    "@types/react-dom": 18.0.11
-    immer: 9.0.21
-    react: 18.2.0
-    react-dom: 18.2.0
-    typescript: 5.0.4
-    zustand: 4.3.7
   languageName: unknown
   linkType: soft
 
@@ -76,6 +65,41 @@ __metadata:
     react-dom: 18.2.0
     tailwindcss: 3.3.1
     typescript: 5.0.4
+  languageName: unknown
+  linkType: soft
+
+"@aidenpwnz/utils@workspace:*, @aidenpwnz/utils@workspace:libs/utils":
+  version: 0.0.0-use.local
+  resolution: "@aidenpwnz/utils@workspace:libs/utils"
+  dependencies:
+    "@hookstate/core": 4.0.1
+    "@types/react": 18.0.35
+    "@types/react-dom": 18.0.11
+    react: 18.2.0
+    react-dom: 18.2.0
+    typescript: 5.0.4
+  languageName: unknown
+  linkType: soft
+
+"@aidenpwnz/web@workspace:apps/web":
+  version: 0.0.0-use.local
+  resolution: "@aidenpwnz/web@workspace:apps/web"
+  dependencies:
+    "@aidenpwnz/components": "workspace:*"
+    "@aidenpwnz/fragments": "workspace:*"
+    "@aidenpwnz/typography": "workspace:*"
+    "@aidenpwnz/utils": "workspace:*"
+    "@types/node": 18.15.11
+    "@types/react": 18.0.35
+    "@types/react-dom": 18.0.11
+    "@vitejs/plugin-react": 3.1.0
+    autoprefixer: 10.4.14
+    postcss: 8.4.21
+    react: 18.2.0
+    react-dom: 18.2.0
+    tailwindcss: 3.3.1
+    typescript: 5.0.4
+    vite: 4.2.0
   languageName: unknown
   linkType: soft
 
@@ -517,6 +541,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@hookstate/core@npm:4.0.1":
+  version: 4.0.1
+  resolution: "@hookstate/core@npm:4.0.1"
+  peerDependencies:
+    react: ^16.8.6 || ^17.0.0 || ^18.0.0
+  checksum: ad93e559e3ccfceff4783b1701cc9bed5fdded3592126639c1220074e6f2a847474e4c2a37b5a70ce3bfc799d7a1dfaa30b1095b507d9cf40de13d60fa388142
+  languageName: node
+  linkType: hard
+
 "@jridgewell/gen-mapping@npm:^0.3.0, @jridgewell/gen-mapping@npm:^0.3.2":
   version: 0.3.3
   resolution: "@jridgewell/gen-mapping@npm:0.3.3"
@@ -617,6 +650,13 @@ __metadata:
   version: 2.0.0
   resolution: "@tootallnate/once@npm:2.0.0"
   checksum: ad87447820dd3f24825d2d947ebc03072b20a42bfc96cbafec16bff8bbda6c1a81fcb0be56d5b21968560c5359a0af4038a68ba150c3e1694fe4c109a063bed8
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:18.15.11":
+  version: 18.15.11
+  resolution: "@types/node@npm:18.15.11"
+  checksum: 977b4ad04708897ff0eb049ecf82246d210939c82461922d20f7d2dcfd81bbc661582ba3af28869210f7e8b1934529dcd46bff7d448551400f9d48b9d3bddec3
   languageName: node
   linkType: hard
 
@@ -1407,13 +1447,6 @@ __metadata:
   dependencies:
     safer-buffer: ">= 2.1.2 < 3.0.0"
   checksum: 3f60d47a5c8fc3313317edfd29a00a692cc87a19cac0159e2ce711d0ebc9019064108323b5e493625e25594f11c6236647d8e256fbe7a58f4a3b33b89e6d30bf
-  languageName: node
-  linkType: hard
-
-"immer@npm:9.0.21":
-  version: 9.0.21
-  resolution: "immer@npm:9.0.21"
-  checksum: 70e3c274165995352f6936695f0ef4723c52c92c92dd0e9afdfe008175af39fa28e76aafb3a2ca9d57d1fb8f796efc4dd1e1cc36f18d33fa5b74f3dfb0375432
   languageName: node
   linkType: hard
 
@@ -2573,15 +2606,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"use-sync-external-store@npm:1.2.0":
-  version: 1.2.0
-  resolution: "use-sync-external-store@npm:1.2.0"
-  peerDependencies:
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0
-  checksum: 5c639e0f8da3521d605f59ce5be9e094ca772bd44a4ce7322b055a6f58eeed8dda3c94cabd90c7a41fb6fa852210092008afe48f7038792fd47501f33299116a
-  languageName: node
-  linkType: hard
-
 "util-deprecate@npm:^1.0.1, util-deprecate@npm:^1.0.2":
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
@@ -2626,27 +2650,6 @@ __metadata:
   checksum: 1088cdc0c89ab835aab07a0a114397b749e8dfb20f4b94241ba179d9c371b72d31e13782b22893860c3d65da596e43b24fce5e023f79cfde427f42549f2e1844
   languageName: node
   linkType: hard
-
-"web@workspace:apps/web":
-  version: 0.0.0-use.local
-  resolution: "web@workspace:apps/web"
-  dependencies:
-    "@aidenpwnz/components": "workspace:*"
-    "@aidenpwnz/fragments": "workspace:*"
-    "@aidenpwnz/store": "workspace:*"
-    "@aidenpwnz/typography": "workspace:*"
-    "@types/react": 18.0.35
-    "@types/react-dom": 18.0.11
-    "@vitejs/plugin-react": 3.1.0
-    autoprefixer: 10.4.14
-    postcss: 8.4.21
-    react: 18.2.0
-    react-dom: 18.2.0
-    tailwindcss: 3.3.1
-    typescript: 5.0.4
-    vite: 4.2.0
-  languageName: unknown
-  linkType: soft
 
 "which@npm:^2.0.2":
   version: 2.0.2
@@ -2693,22 +2696,5 @@ __metadata:
   version: 1.10.2
   resolution: "yaml@npm:1.10.2"
   checksum: ce4ada136e8a78a0b08dc10b4b900936912d15de59905b2bf415b4d33c63df1d555d23acb2a41b23cf9fb5da41c256441afca3d6509de7247daa062fd2c5ea5f
-  languageName: node
-  linkType: hard
-
-"zustand@npm:4.3.7":
-  version: 4.3.7
-  resolution: "zustand@npm:4.3.7"
-  dependencies:
-    use-sync-external-store: 1.2.0
-  peerDependencies:
-    immer: ">=9.0"
-    react: ">=16.8"
-  peerDependenciesMeta:
-    immer:
-      optional: true
-    react:
-      optional: true
-  checksum: 355b414ba4830b6106bcb888077c5f90f40ed649e4127e337eff4fb4ea90e88bf5cccf32344711d743cb92a676a0643a6ab3674ddc60ed49f17ea1bc8e3f58e2
   languageName: node
   linkType: hard

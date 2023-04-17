@@ -2,7 +2,7 @@ import { profilepic } from "@aidenpwnz/assets";
 import { motion } from "framer-motion";
 
 export const ProfilePicture: React.FC = () => (
-  <div className="absolute top-1/4 left-1/2 -translate-x-1/2 translate-y-1/8 flex flex-col items-center gap-12 z-[11]">
+  <div className="absolute top-[28%] left-1/2 -translate-x-1/2 flex flex-col items-center gap-12 z-[11]">
     <motion.h2
       initial={{
         y: -500,

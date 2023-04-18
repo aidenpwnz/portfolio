@@ -15,7 +15,7 @@ export const ProfilePicture: React.FC = () => (
       transition={{
         duration: 3,
       }}
-      className="text-[15px] text-comet tracking-[15px] text-center shadow"
+      className="text-[15px] text-blue-haze tracking-[15px] text-center shadow"
     >
       FRONTEND DEVELOPER
     </motion.h2>

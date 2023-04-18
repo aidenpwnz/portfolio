@@ -20,6 +20,6 @@ export const EmailSection: React.FC = () => (
     className="flex flex-row items-center justify-end cursor-pointer"
   >
     <c.EmailIcon />
-    <p className="text-comet hidden md:inline-flex">Get in touch!</p>
+    <p className="text-blue-haze hidden md:inline-flex">Get in touch!</p>
   </motion.div>
 );

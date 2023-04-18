@@ -14,7 +14,7 @@ export const Circles: React.FC = () => {
       transition={{
         duration: 2.7,
       }}
-      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-ellipsis"
     >
       <div className="flex relative items-center justify-center">
         <div className="rounded-full bg-grad w-[192px] h-[192px] animate-breathing absolute md:w-[402px] md:h-[402px]">

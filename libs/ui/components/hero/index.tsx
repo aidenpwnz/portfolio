@@ -5,11 +5,11 @@ import { Typewriter } from "./typewriter";
 
 export const Hero: React.FC = () => {
   return (
-    <section id="hero" className="max-w-7xl mx-auto snap-center">
+    <div className="max-w-7xl mx-auto h-screen w-full relative">
       <Circles />
       <ProfilePicture />
       <Typewriter />
       <Navigator />
-    </section>
+    </div>
   );
 };

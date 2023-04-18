@@ -1,7 +1,7 @@
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 export const Typewriter: React.FC = () => {
-  const text = useTypewriter({
+  const [text, helper] = useTypewriter({
     words: [
       "🤖 introduceSelf()",
       "Hi, my name is Luca Pellegrino!",
@@ -9,7 +9,8 @@ export const Typewriter: React.FC = () => {
     ],
     loop: true,
     delaySpeed: 2000,
-  })[0];
+    typeSpeed: 100,
+  });
 
   return (
     <h1 className="absolute top-[55%] left-1/2 -translate-x-1/2 z-[11] text-center">

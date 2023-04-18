@@ -24,7 +24,7 @@ module.exports = {
       },
       colors: {
         "ebony-clay": "#232934",
-        comet: "#C0CADD",
+        "blue-haze": "#C0CADD",
       },
       backgroundImage: {
         grad: "linear-gradient(to right, red, purple)",

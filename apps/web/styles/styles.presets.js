@@ -5,6 +5,7 @@ module.exports = {
         default: "Inter",
       },
       screens: {
+        sm: "400px",
         md: "830px",
       },
       keyframes: {
@@ -28,22 +29,6 @@ module.exports = {
       },
       backgroundImage: {
         grad: "linear-gradient(to right, red, purple)",
-      },
-      fontWeight: {
-        important: "bold",
-        h1: "bold",
-        h2: "semibold",
-        button: "normal",
-        p: "normal",
-        psm: "normal",
-      },
-      textColor: {
-        important: "black",
-        h1: "black",
-        h2: "black",
-        button: "black",
-        p: "black",
-        psm: "black",
       },
       fontSize: {
         important: "50px",

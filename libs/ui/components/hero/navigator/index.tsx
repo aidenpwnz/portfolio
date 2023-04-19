@@ -16,7 +16,7 @@ export const Navigator: React.FC = () => {
       transition={{
         duration: 3,
       }}
-      className="absolute top-[65%] left-[50%] -translate-x-[50%] flex flex-row flex-wrap items-center justify-between gap-sub z-[11] text-blue-haze"
+      className="absolute top-[80%] left-[50%] -translate-x-[50%] flex flex-row items-center justify-between lg:gap-sub z-[11] text-blue-haze sm:top-[65%]"
       style={{ translateX: "-50%" }}
     >
       <AboutButton />

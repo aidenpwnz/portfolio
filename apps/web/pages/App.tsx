@@ -3,7 +3,7 @@ import "../styles/App.css";
 
 const App = () => {
   return (
-    <main className="h-screen bg-ebony-clay text-white snap-mandatory snap-y overflow-y-scroll z-0">
+    <main className="h-screen bg-ebony-clay text-white snap-mandatory snap-y overflow-y-scroll z-0 overflow-x-hidden">
       {/* Header */}
       <c.Header />
       {/* Hero */}
@@ -15,6 +15,9 @@ const App = () => {
         <c.About />
       </section>
       {/* Skills */}
+      <section id="experience" className="snap-center">
+        <c.Experience />
+      </section>
       {/* Experiences */}
     </main>
   );

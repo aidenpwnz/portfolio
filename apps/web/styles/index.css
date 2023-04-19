@@ -4,7 +4,7 @@
 
 @layer components {
   .navigator {
-    @apply px-4 py-1 border border-ebony-clay uppercase cursor-pointer scale-90 tracking-widest text-xs rounded-full transition-all text-blue-haze hover:border-l-red-500 hover:border-t-red-500 hover:border-r-purple-500 hover:border-b-purple-500;
+    @apply px-2 py-1 uppercase cursor-pointer scale-90 tracking-widest text-xs rounded-full transition-all text-blue-haze hover:underline hover:decoration-white hover:underline-offset-8 sm:px-4;
   }
 }
 

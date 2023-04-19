@@ -31,7 +31,7 @@ export const CardSlider: React.FC = () => {
         icon={antlia_icon}
         position='Frontend Developer'
         company='Antlia srl - Milan, IT'
-        date={{ start: "Jan 2020", end: "Jul 2022" }}
+        date={{ start: "Jan 2021", end: "Jul 2022" }}
         stack={[
           react_icon,
           typescript_icon,

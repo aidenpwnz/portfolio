@@ -30,3 +30,5 @@ export const css_icon: string =
   "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg";
 export const vscode_icon: string =
   "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg";
+export const yarn_icon: string =
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/yarn/yarn-original.svg";

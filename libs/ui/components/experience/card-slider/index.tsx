@@ -2,7 +2,6 @@ import { ExperienceCard } from "./card";
 import { antlia_icon, sensei_icon, anglia_icon } from "@aidenpwnz/assets";
 import {
   dart_icon,
-  firebase_icon,
   flutter_icon,
   jquery_icon,
   react_icon,

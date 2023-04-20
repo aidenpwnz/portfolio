@@ -22,6 +22,14 @@ const App = () => {
       <section id='skills' className='snap-start'>
         <c.Skills />
       </section>
+      {/* Case Studies */}
+      <section id='case-studies' className='snap-start'>
+        <c.CaseStudies />
+      </section>
+      {/* Contacts */}
+      <section id='contacts' className='snap-start'>
+        <c.Contacts />
+      </section>
     </main>
   );
 };

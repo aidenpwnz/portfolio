@@ -23,7 +23,7 @@ export const CardSlider: React.FC = () => {
         date={{ start: "Jul 2022", end: "PRESENT" }}
         stack={[react_icon, typescript_icon, tailwind_icon, jquery_icon]}
         description={[
-          "Education scoped project with React and TS, state management with Zustand, Tailwind CSS UI, PocketBase database and DDD architecture",
+          "Education scoped project with React and TS, Zustand state management, Tailwind CSS UI, PocketBase database & DDD architecture",
           "Integration of a Public Digital Identity System in IE with JQuery"
         ]}
       />

@@ -6,7 +6,7 @@ export const SkillsTitle: React.FC = () => (
       Skills
     </h3>
     <h3 className='text-xs text-blue-haze tracking-[5px] shadow lg:absolute lg:top-[15%]'>
-      ...There's still space to add more!
+      ...there's still space to add more!
     </h3>
   </div>
 );

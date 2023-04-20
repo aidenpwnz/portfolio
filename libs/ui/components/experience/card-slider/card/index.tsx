@@ -31,15 +31,15 @@ export const ExperienceCard: React.FC<{
       <div className='px-0 md:px-10 flex flex-col gap-2 items-start'>
         <h4 className='text-xl font-light'>{props.position}</h4>
         <p className='text-base font-bold mt-1'>{props.company}</p>
+        <p className='uppercase text-xs font-semibold'>
+          {props.date.start} - {props.date.end}
+        </p>
         <div className='flex flex-row space-x-2 my-2'>
           {props.stack.map(item => (
             <img key={item} src={item} alt={item} className='h-10 w-10' />
           ))}
         </div>
-        <p className='uppercase text-base font-semibold'>
-          {props.date.start} - {props.date.end}
-        </p>
-        <ul className='list-disc text-sm text-start space-y-4'>
+        <ul className='list-disc text-sm font-light text-start space-y-4'>
           {props.description.map(item => (
             <li key={item} className=''>
               {item}

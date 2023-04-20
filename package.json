@@ -17,7 +17,6 @@
   },
   "workspaces": [
     "apps/*",
-    "libs/utils",
     "libs/ui/components",
     "libs/ui/assets"
   ],

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
-export const ExperienceTitle: React.FC = () => (
+export const ContactsTitle: React.FC = () => (
   <h3 className='text-xl text-blue-haze tracking-[20px] shadow absolute top-[10%] uppercase'>
-    Experience
+    Contact Me
   </h3>
 );

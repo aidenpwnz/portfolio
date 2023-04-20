@@ -17,6 +17,7 @@ export const EmailSection: React.FC = () => (
       duration: 1.5,
       delay: 1
     }}
+    onClick={() => (location.href = "#contact-me")}
     className='flex flex-row items-center justify-end cursor-pointer'
   >
     <EmailIcon />

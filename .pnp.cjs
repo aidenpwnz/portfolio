@@ -78,6 +78,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@aidenpwnz/components", "workspace:libs/ui/components"],\
             ["@aidenpwnz/assets", "workspace:libs/ui/assets"],\
             ["@aidenpwnz/utils", "workspace:libs/utils"],\
+            ["@heroicons/react", "virtual:3d50eae76ae0941328a10966d9f73cb6ca1c87c53ccfb52820a39f2f2c4fc3bc3acc4f72ae04bea45db51d7ac97b7c4ca4eee4d66572a3df6b0bef569c1cfd78#npm:2.0.17"],\
             ["@types/react", "npm:18.0.35"],\
             ["@types/react-dom", "npm:18.0.11"],\
             ["autoprefixer", "virtual:3d50eae76ae0941328a10966d9f73cb6ca1c87c53ccfb52820a39f2f2c4fc3bc3acc4f72ae04bea45db51d7ac97b7c4ca4eee4d66572a3df6b0bef569c1cfd78#npm:10.4.14"],\
@@ -697,6 +698,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@gar-promisify-npm-1.1.3-ac1a325862-4059f790e2.zip/node_modules/@gar/promisify/",\
           "packageDependencies": [\
             ["@gar/promisify", "npm:1.1.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@heroicons/react", [\
+        ["npm:2.0.17", {\
+          "packageLocation": "./.yarn/cache/@heroicons-react-npm-2.0.17-b266f18485-31677c9b95.zip/node_modules/@heroicons/react/",\
+          "packageDependencies": [\
+            ["@heroicons/react", "npm:2.0.17"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:3d50eae76ae0941328a10966d9f73cb6ca1c87c53ccfb52820a39f2f2c4fc3bc3acc4f72ae04bea45db51d7ac97b7c4ca4eee4d66572a3df6b0bef569c1cfd78#npm:2.0.17", {\
+          "packageLocation": "./.yarn/__virtual__/@heroicons-react-virtual-2aa8f0b810/0/cache/@heroicons-react-npm-2.0.17-b266f18485-31677c9b95.zip/node_modules/@heroicons/react/",\
+          "packageDependencies": [\
+            ["@heroicons/react", "virtual:3d50eae76ae0941328a10966d9f73cb6ca1c87c53ccfb52820a39f2f2c4fc3bc3acc4f72ae04bea45db51d7ac97b7c4ca4eee4d66572a3df6b0bef569c1cfd78#npm:2.0.17"],\
+            ["@types/react", "npm:18.0.35"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\

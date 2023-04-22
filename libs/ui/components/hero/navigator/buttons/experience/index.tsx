@@ -1,14 +1,14 @@
-import { useAtom } from "@aidenpwnz/utils";
+import { useState } from "react";
 
 export const ExperienceButton: React.FC = () => {
-  const clicked = useAtom(false);
+  const [clicked, setClicked] = useState<boolean>(false);
 
   return (
     <a
-      href="#experience"
-      className={`navigator ${clicked.get() && "animate-wiggle"}`}
-      onClick={() => clicked.set((s) => true)}
-      onAnimationEnd={() => clicked.set((s) => false)}
+      href='#experience'
+      className={`navigator ${clicked && "animate-wiggle"}`}
+      onClick={() => setClicked(true)}
+      onAnimationEnd={() => setClicked(false)}
     >
       Experience
     </a>

@@ -14,8 +14,8 @@ module.exports = {
           "50%": { transform: "rotate(3deg)" }
         },
         "wiggle-big": {
-          "0%": { transform: "rotate(-15deg)" },
-          "50%": { transform: "rotate(360deg)" },
+          "0%": { transform: "rotate(-45deg)" },
+          "33%": { transform: "rotate(360deg)" },
           "100%": { transform: "rotate(-360deg)" }
         },
         "breathing": {

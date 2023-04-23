@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "aidenpwnz portfolio workspace",
   "author": "Luca Pellegrino",
+  "homepage": "https://aidenpwnz.github.io/portfolio/",
   "license": "MIT",
   "private": true,
   "scripts": {

@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@aidenpwnz/components": "workspace:*",
-    "@aidenpwnz/utils": "workspace:*",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "vite-plugin-svgr": "^2.4.0"

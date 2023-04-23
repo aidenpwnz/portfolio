@@ -6,7 +6,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "cd apps/web && yarn dev"
+    "dev": "cd apps/web && yarn dev",
+    "build": "cd apps/web && yarn build"
   },
   "devDependencies": {
     "@prettier/plugin-xml": "^2.2.0",

@@ -27,7 +27,7 @@ const App = () => {
         <c.CaseStudies />
       </section>
       {/* Contacts */}
-      <section id='contacts' className='snap-start'>
+      <section id='contact-me' className='snap-start'>
         <c.Contacts />
       </section>
     </main>

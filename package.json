@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "cd apps/web && yarn dev",
     "predeploy": "cd apps/web && yarn build",
-    "deploy": "gh-pages -d apps/web/public/dist"
+    "deploy": "gh-pages -d apps/web/dist"
   },
   "devDependencies": {
     "@prettier/plugin-xml": "^2.2.0",

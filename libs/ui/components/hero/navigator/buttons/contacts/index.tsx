@@ -5,7 +5,7 @@ export const ContactsButton: React.FC = () => {
 
   return (
     <a
-      href='#contacts'
+      href='#contact-me'
       className={`navigator ${clicked && "animate-wiggle"}`}
       onClick={() => setClicked(true)}
       onAnimationEnd={() => setClicked(false)}

@@ -11,7 +11,7 @@ export const About: React.FC<{}> = props => {
       }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 2.5 }}
-      className='max-w-7xl h-screen mx-auto w-full flex flex-col text-center px-10 lg:px-20 lg:text-start lg:flex-row justify-evenly items-center lg:gap-32 relative'
+      className='max-w-7xl h-screen min-h-screen mx-auto w-full flex flex-col text-center px-10 lg:px-20 lg:text-start lg:flex-row justify-evenly items-center lg:gap-32 relative'
     >
       {/* Title */}
       <AboutTitle />
